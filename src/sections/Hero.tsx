@@ -1,13 +1,17 @@
+import Button from "@/components/Button";
+import bg from "/images/bg.png";
 import { words } from "@/constants";
+import HeroExperience from "@/components/HeroModels/HeroExperience";
 
 function Hero() {
   return (
     <section id="hero" className="relative overflow-hidden">
       <div className="absolute top-0 left-0 z-10">
-        <img src="@/assets/bg.png" alt="background" />
+        <img src={bg} alt="background" />
       </div>
 
       <div className="hero-layout">
+        {/* Left: Hero Content */}
         <header className="flex flex-col justify-center md:w-full w-screen md:px-20 px-5">
           <div className="flex flex-col gap-7">
             <div className="hero-text">
@@ -33,8 +37,24 @@ function Hero() {
               <h1>Into Real Projects</h1>
               <h1>that Deliver Results</h1>
             </div>
+            <p className="text-white-50 md:text-xl relative z-10">
+              Hi, I am Usama Mangi, a Full Stack Developer with a passion for
+              latest tech.
+            </p>
+            <Button
+              className="md:w-80 md:h-16 w-60 h-12"
+              id="button"
+              text="See my work"
+            />
           </div>
         </header>
+
+        {/* Right: 3D Model */}
+        <figure>
+          <div className="hero-3d-layout">
+            <HeroExperience />
+          </div>
+        </figure>
       </div>
     </section>
   );
