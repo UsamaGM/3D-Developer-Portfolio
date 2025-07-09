@@ -1,3 +1,4 @@
+import LogoSection from "./components/LogoSection";
 import NavBar from "./components/NavBar";
 import "./index.css";
 import Hero from "./sections/Hero";
@@ -9,6 +10,7 @@ export function App() {
       <NavBar />
       <Hero />
       <ShowcaseSection />
+      <LogoSection />
     </>
   );
 }
