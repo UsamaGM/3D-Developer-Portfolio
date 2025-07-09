@@ -12,8 +12,8 @@ function ShowcaseSection() {
             </div>
             <div className="text-content">
               <h2>
-                AI based Interview management, sheduling, assessment, grading,
-                and recommending system
+                AI based Interview Management, Sheduling, Assessment, Grading,
+                and Recommendation System
               </h2>
               <p className="text-white-50 md:text-xl"></p>
             </div>
