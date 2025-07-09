@@ -26,6 +26,15 @@ const HeroLights = () => (
       intensity={60}
       color="#9d4edd"
     />
+    {/* light for the outside of the room */}
+    <spotLight
+      position={[-4, 0, -25]}
+      angle={0.4}
+      penumbra={0.5}
+      intensity={60}
+      color="white"
+    />
+
     {/* area light for soft moody fill */}
     <primitive
       object={new THREE.RectAreaLight("#a259ff", 8, 3, 2)}
@@ -33,6 +42,7 @@ const HeroLights = () => (
       rotation={[-Math.PI / 4, Math.PI / 4, 0]}
       intensity={15}
     />
+
     {/* subtle point light for atmospheric tone */}
     <pointLight position={[0, 1, 0]} intensity={10} color="#7209b7" />
     <pointLight position={[1, 2, -2]} intensity={10} color="#0d00a4" />
