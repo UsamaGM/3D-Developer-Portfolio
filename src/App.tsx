@@ -4,6 +4,7 @@ import "./index.css";
 import Hero from "./sections/Hero";
 import ShowcaseSection from "./sections/ShowcaseSection";
 import FeatureCards from "./components/FeatureCards";
+import ExperienceSection from "./sections/ExperienceSection";
 
 export function App() {
   return (
@@ -13,6 +14,7 @@ export function App() {
       <ShowcaseSection />
       <LogoSection />
       <FeatureCards />
+      <ExperienceSection />
     </>
   );
 }
