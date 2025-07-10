@@ -50,7 +50,7 @@ import fb from "/images/fb.png";
 import x from "/images/x.png";
 import linkedin from "/images/linkedin.png";
 
-import { ExpCardData, TechStackIcon, TechStackImg } from "./types";
+import { ExpCardData, TechStackIcon, TechStackImg, Testimonial } from "./types";
 
 const navLinks = [
   {
@@ -256,7 +256,7 @@ const expLogos = [
   },
 ];
 
-const testimonials = [
+const testimonials: Testimonial[] = [
   {
     name: "Esther Howard",
     mentions: "@estherhoward",

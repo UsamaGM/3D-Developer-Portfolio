@@ -21,7 +21,7 @@ export interface ExpCardData {
 }
 
 export interface GlowCardProps {
-  card: ExpCardData;
+  card: Partial<ExpCardData>;
   children: ReactNode;
   index: number;
 }
@@ -40,4 +40,11 @@ export interface TechStackImg {
 
 export interface TechIconProps {
   model: TechStackIcon;
+}
+
+export interface Testimonial {
+  name: string;
+  mentions: string;
+  review: string;
+  imgPath: string;
 }
