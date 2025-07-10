@@ -25,3 +25,19 @@ export interface GlowCardProps {
   children: ReactNode;
   index: number;
 }
+
+export interface TechStackIcon {
+  name: string;
+  modelPath: string;
+  scale: number;
+  rotation: [x: number, y: number, z: number];
+}
+
+export interface TechStackImg {
+  name: string;
+  imgPath: string;
+}
+
+export interface TechIconProps {
+  model: TechStackIcon;
+}

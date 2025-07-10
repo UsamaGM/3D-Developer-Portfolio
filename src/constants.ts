@@ -26,7 +26,7 @@ import threeImg from "/images/logos/three.png";
 import gitImg from "/images/logos/git.svg";
 
 import reactIcon from "/models/react_logo-transformed.glb";
-import pythonIcon from "/models/python-transformed.glb";
+import bunIcon from "/models/bun-transformed.glb";
 import nodeIcon from "/models/node-transformed.glb";
 import threeIcon from "/models/three.js-transformed.glb";
 import gitIcon from "/models/git-svg-transformed.glb";
@@ -49,6 +49,8 @@ import insta from "/images/insta.png";
 import fb from "/images/fb.png";
 import x from "/images/x.png";
 import linkedin from "/images/linkedin.png";
+
+import { ExpCardData, TechStackIcon, TechStackImg } from "./types";
 
 const navLinks = [
   {
@@ -141,7 +143,7 @@ const abilities = [
   },
 ];
 
-const techStackImgs = [
+const techStackImgs: TechStackImg[] = [
   {
     name: "React Developer",
     imgPath: reactImg,
@@ -164,7 +166,7 @@ const techStackImgs = [
   },
 ];
 
-const techStackIcons = [
+const techStackIcons: TechStackIcon[] = [
   {
     name: "React Developer",
     modelPath: reactIcon,
@@ -173,9 +175,9 @@ const techStackIcons = [
   },
   {
     name: "Python Developer",
-    modelPath: pythonIcon,
-    scale: 0.8,
-    rotation: [0, 0, 0],
+    modelPath: bunIcon,
+    scale: 2.3,
+    rotation: [0.1, 0, 0],
   },
   {
     name: "Backend Developer",
@@ -197,7 +199,7 @@ const techStackIcons = [
   },
 ];
 
-const expCards = [
+const expCards: ExpCardData[] = [
   {
     review:
       "Adrian brought creativity and technical expertise to the team, significantly improving our frontend performance. His work has been invaluable in delivering faster experiences.",
