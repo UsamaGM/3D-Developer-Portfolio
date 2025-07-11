@@ -7,6 +7,7 @@ import FeatureCards from "./components/FeatureCards";
 import ExperienceSection from "./sections/ExperienceSection";
 import TechStack from "./sections/TechStack";
 import Testimonials from "./sections/Testimonials";
+import ContactSection from "./sections/ContactSection";
 
 export function App() {
   return (
@@ -19,6 +20,7 @@ export function App() {
       <ExperienceSection />
       <TechStack />
       <Testimonials />
+      <ContactSection />
     </>
   );
 }

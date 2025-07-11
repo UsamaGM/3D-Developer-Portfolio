@@ -2,13 +2,56 @@ import { useRef } from "react";
 import { useGLTF, useTexture } from "@react-three/drei";
 import { EffectComposer, SelectiveBloom } from "@react-three/postprocessing";
 import { BlendFunction } from "postprocessing";
+import * as THREE from "three";
+import type { GLTF } from "three-stdlib";
 import roomModel from "/models/optimized-room.glb";
 import texture from "/images/textures/mat1.png";
-import * as THREE from "three";
 
-export function Room(props) {
-  const { nodes, materials } = useGLTF(roomModel);
-  const screensRef = useRef();
+type GLTFResult = GLTF & {
+  nodes: {
+    _________6_blinn1_0: THREE.Mesh;
+    body1_blinn1_0: THREE.Mesh;
+    cabin_blinn1_0: THREE.Mesh;
+    chair_body_blinn1_0: THREE.Mesh;
+    comp_blinn1_0: THREE.Mesh;
+    emis_lambert1_0: THREE.Mesh;
+    handls_blinn1_0: THREE.Mesh;
+    keyboard_blinn1_0: THREE.Mesh;
+    kovrik_blinn1_0: THREE.Mesh;
+    lamp_bl_blinn1_0: THREE.Mesh;
+    lamp_white_blinn1_0: THREE.Mesh;
+    miuse_blinn1_0: THREE.Mesh;
+    monitor2_blinn1_0: THREE.Mesh;
+    monitor3_blinn1_0: THREE.Mesh;
+    pCylinder5_blinn1_0: THREE.Mesh;
+    pillows_blinn1_0: THREE.Mesh;
+    polySurface53_blinn1_0: THREE.Mesh;
+    radiator_blinn1_0: THREE.Mesh;
+    radiator_blinn1_0001: THREE.Mesh;
+    railing_blinn1_0: THREE.Mesh;
+    red_bttns_blinn1_0: THREE.Mesh;
+    red_vac_blinn1_0: THREE.Mesh;
+    stylus_blinn1_0: THREE.Mesh;
+    table_blinn1_0: THREE.Mesh;
+    tablet_blinn1_0: THREE.Mesh;
+    triangle_blinn1_0: THREE.Mesh;
+    vac_black_blinn1_0: THREE.Mesh;
+    vacuum1_blinn1_0: THREE.Mesh;
+    vacuumgrey_blinn1_0: THREE.Mesh;
+    vires_blinn1_0: THREE.Mesh;
+    window_blinn1_0: THREE.Mesh;
+    window4_phong1_0: THREE.Mesh;
+  };
+  materials: {
+    lambert1: THREE.Material;
+    blinn1: THREE.Material;
+    phong1: THREE.Material;
+  };
+};
+
+export function Room() {
+  const { nodes, materials } = useGLTF(roomModel) as unknown as GLTFResult;
+  const screensRef = useRef<THREE.Mesh>(null);
   const matcapTexture = useTexture(texture);
 
   const curtainMaterial = new THREE.MeshPhongMaterial({
@@ -40,10 +83,10 @@ export function Room(props) {
   });
 
   return (
-    <group {...props} dispose={null}>
+    <group dispose={null}>
       <EffectComposer>
         <SelectiveBloom
-          selection={screensRef}
+          selection={screensRef.current ? [screensRef.current] : []}
           intensity={1.2}
           luminanceThreshold={0.2}
           luminanceSmoothing={0.9}
