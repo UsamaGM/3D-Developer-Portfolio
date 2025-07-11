@@ -1,5 +1,5 @@
 import TitleHeader from "@/components/TitleHeader";
-import { ChangeEvent, FormEvent, useState } from "react";
+import { ChangeEvent, FormEvent, useRef, useState } from "react";
 import arrow from "/images/arrow-right.svg";
 import ContactExperience from "@/components/ContactExperience";
 import emailjs from "@emailjs/browser";
@@ -11,6 +11,8 @@ function ContactSection() {
     email: "",
     message: "",
   });
+
+  const formRef = useRef<HTMLFormElement>(null);
 
   function handleChange(
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -31,15 +33,18 @@ function ContactSection() {
         publicKey: string;
       } = await res.json();
 
+      console.log(config.emailTemplateId);
+
       await emailjs.sendForm(
         config.serviceId,
         config.emailTemplateId,
-        e.currentTarget,
+        formRef.current!,
         config.publicKey
       );
 
       setFormData({ name: "", email: "", message: "" });
     } catch (error) {
+      console.error(error);
       alert("Failed to send email. Give it another try?");
     } finally {
       setLoading(false);
@@ -58,6 +63,7 @@ function ContactSection() {
           <div className="xl:col-span-5">
             <div className="flex-center card-border rounded-xl p-10">
               <form
+                ref={formRef}
                 onSubmit={handleSubmit}
                 className="w-full flex flex-col gap-7"
               >

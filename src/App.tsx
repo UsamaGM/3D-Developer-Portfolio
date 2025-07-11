@@ -8,6 +8,7 @@ import ExperienceSection from "./sections/ExperienceSection";
 import TechStack from "./sections/TechStack";
 import Testimonials from "./sections/Testimonials";
 import ContactSection from "./sections/ContactSection";
+import Footer from "./sections/Footer";
 
 export function App() {
   return (
@@ -21,6 +22,7 @@ export function App() {
       <TechStack />
       <Testimonials />
       <ContactSection />
+      <Footer />
     </>
   );
 }

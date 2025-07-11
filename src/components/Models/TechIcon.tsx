@@ -10,7 +10,7 @@ function TechIcon(props: TechIconProps) {
       <ambientLight intensity={0.3} />
       <directionalLight position={[5, 5, 5]} intensity={1} />
 
-      {/* <Environment preset="city" /> */}
+      <Environment preset="city" />
 
       <OrbitControls enableZoom={false} />
 

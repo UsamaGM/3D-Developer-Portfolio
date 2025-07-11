@@ -46,7 +46,7 @@ import client5 from "/images/client5.png";
 import client6 from "/images/client6.png";
 
 import insta from "/images/insta.png";
-import fb from "/images/fb.png";
+import github from "/images/github.png";
 import x from "/images/x.png";
 import linkedin from "/images/linkedin.png";
 
@@ -303,20 +303,19 @@ const testimonials: Testimonial[] = [
 
 const socialImgs = [
   {
-    name: "insta",
-    imgPath: insta,
-  },
-  {
-    name: "fb",
-    imgPath: fb,
-  },
-  {
-    name: "x",
-    imgPath: x,
-  },
-  {
     name: "linkedin",
+    url: "https://linkedin.com/in/usama-mangi",
     imgPath: linkedin,
+  },
+  {
+    name: "github",
+    url: "https://github.com/UsamaGM",
+    imgPath: github,
+  },
+  {
+    name: "insta",
+    url: "https://instagram.com/usamamangi.gm",
+    imgPath: insta,
   },
 ];
 

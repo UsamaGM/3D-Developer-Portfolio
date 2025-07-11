@@ -9,7 +9,7 @@ const server = serve({
     "/api/env": {
       GET: () =>
         Response.json({
-          serviceID: process.env.EMAILJS_SERVICE_ID,
+          serviceId: process.env.EMAILJS_SERVICE_ID,
           emailTemplateId: process.env.EMAILJS_TEMPLATE_ID,
           publicKey: process.env.EMAILJS_PUBLIC_KEY,
         }),
