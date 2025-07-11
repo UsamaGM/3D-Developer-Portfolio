@@ -2,8 +2,10 @@ import TitleHeader from "@/components/TitleHeader";
 import { ChangeEvent, FormEvent, useState } from "react";
 import arrow from "/images/arrow-right.svg";
 import ContactExperience from "@/components/ContactExperience";
+import emailjs from "@emailjs/browser";
 
 function ContactSection() {
+  const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -17,8 +19,31 @@ function ContactSection() {
     setFormData({ ...formData, [name]: value });
   }
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
+
+    setLoading(true);
+    try {
+      const res = await fetch("/api/env");
+      const config: {
+        serviceId: string;
+        emailTemplateId: string;
+        publicKey: string;
+      } = await res.json();
+
+      await emailjs.sendForm(
+        config.serviceId,
+        config.emailTemplateId,
+        e.currentTarget,
+        config.publicKey
+      );
+
+      setFormData({ name: "", email: "", message: "" });
+    } catch (error) {
+      alert("Failed to send email. Give it another try?");
+    } finally {
+      setLoading(false);
+    }
   }
 
   return (
@@ -72,12 +97,14 @@ function ContactSection() {
                     required
                   />
                 </div>
-                <button type="submit">
+                <button type="submit" disabled={loading}>
                   <div className="cta-button group">
                     <div className="bg-circle" />
-                    <p className="text">Send Message</p>
+                    <p className="text">
+                      {loading ? "Sending..." : "Send Message"}
+                    </p>
                     <div className="arrow-wrapper">
-                      <img src={arrow} alt="arrow" />
+                      <img src={arrow} alt="arrow" className="animate-none" />
                     </div>
                   </div>
                 </button>
