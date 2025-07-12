@@ -18,7 +18,7 @@ function ShowcaseSection() {
     gsap.fromTo(
       sectionRef.current,
       { opacity: 0 },
-      { opacity: 1, duration: 1.5 }
+      { opacity: 1, duration: 1.5 },
     );
     const projects = [project1.current, project2.current, project3.current];
     projects.forEach((project, index) => {
@@ -34,7 +34,7 @@ function ShowcaseSection() {
             trigger: project,
             start: "top bottom-=100",
           },
-        }
+        },
       );
     });
   }, []);
@@ -51,24 +51,28 @@ function ShowcaseSection() {
             <div className="text-content">
               <h2>AI-Powered Interview Platform</h2>
               <p className="text-white-50 md:text-xl">
-                Developed a MERN + TypeScript platform integrating Gemini 2.0
-                Flash API to auto-generate and grade interview questions in real
-                time.
+                Built a full-stack MERN + TypeScript platform that leverages
+                Gemini 2.0 Flash API to dynamically generate, analyze, and grade
+                interview questions in real time — streamlining technical
+                assessments with AI.
               </p>
               <div className="flex justify-between">
-                <a
-                  className="text-blue-400 hover:underline hover:text-blue-500 cursor-pointer"
-                  href="https://interview-ai-wine.vercel.com"
-                >
+                <a className="project-link" href="https://youtu.be/_ciOg71LkuQ">
                   Live Demo
                 </a>
                 <a
-                  className="text-blue-400 hover:underline hover:text-blue-500 cursor-pointer"
+                  className="project-link"
                   href="https://github.com/UsamaGM/InterviewAI"
                 >
                   View Source Code
                 </a>
               </div>
+            </div>
+            <div className="text-lg mt-12">
+              “I don’t just write code — I design systems that solve real
+              problems. For me, great software is silent, seamless, and
+              scalable. Every project is a step toward mastering the craft and
+              building something that truly matters.”
             </div>
           </div>
 
@@ -78,19 +82,38 @@ function ShowcaseSection() {
               <div className="image-wrapper bg-[#ffefdb]">
                 <img src={project2Img} alt="TaskManager" />
               </div>
-              <h2>
-                Task Management with Projects and Teams and a Kanban style task
-                enforcement
-              </h2>
+              <h2>Full-Stack Task Manager Built with Bun.js</h2>
+              <div className="flex justify-between">
+                <a className="project-link" href="https://youtu.be/InGBcJNQYz0">
+                  Live Demo
+                </a>
+                <a
+                  className="project-link"
+                  href="https://github.com/UsamaGM/task-manager"
+                >
+                  View Source Code
+                </a>
+              </div>
             </div>
             <div className="project" ref={project3}>
               <div className="image-wrapper bg-[#ffe7eb]">
                 <img src={project3Img} alt="ChatMe" />
               </div>
-              <h2>
-                A realtime chatting application with individual and group
-                messaging, message reactions and notifications
-              </h2>
+              <h2>Real-Time MERN Chat App with Socket.IO</h2>
+              <div className="flex justify-between">
+                <a
+                  className="project-link"
+                  href="https://chat-me-wine.vercel.app"
+                >
+                  Live Demo
+                </a>
+                <a
+                  className="project-link"
+                  href="https://github.com/UsamaGM/chat-me"
+                >
+                  View Source Code
+                </a>
+              </div>
             </div>
           </div>
         </div>

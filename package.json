@@ -23,11 +23,11 @@
     "dotenv": "^17.2.0",
     "gsap": "^3.13.0",
     "react": "^19",
-    "react-countup": "^6.5.3",
     "react-dom": "^19",
     "react-responsive": "^10.0.1",
     "tailwindcss": "^4.0.6",
-    "three": "^0.178.0"
+    "three": "^0.178.0",
+    "use-count-up": "^3.0.1"
   },
   "devDependencies": {
     "@types/bun": "latest",

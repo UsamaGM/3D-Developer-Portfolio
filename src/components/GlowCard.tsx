@@ -1,6 +1,6 @@
 import { GlowCardProps } from "@/types";
-import star from "/images/star.png";
 import { useRef } from "react";
+import star from "/images/star.png";
 
 function GlowCard(props: GlowCardProps) {
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
@@ -16,7 +16,7 @@ function GlowCard(props: GlowCardProps) {
     let angle = (Math.atan2(mouseY, mouseX) * 180) / Math.PI;
     angle = (angle + 360) % 360;
 
-    card.style.setProperty("--start", `${angle + 60}`);
+    card.style.setProperty("--start", `${angle}`); // Remove the +60 offset
   };
 
   return (
@@ -25,18 +25,20 @@ function GlowCard(props: GlowCardProps) {
         cardRefs.current[props.index] = el;
       }}
       onMouseMove={handleMouseMove(props.index)}
-      className="card card-border timeline-card rounded-xl p-10 mb-5 break-inside-avoid-column"
+      className="card timeline-card rounded-xl p-0.25 mb-5 break-inside-avoid-column"
     >
-      <div className="glow"></div>
-      <div className="flex items-center gap-1 mb-5">
-        {Array.from({ length: 5 }, (_, i) => (
-          <img key={i} src={star} alt="star" className="size-5" />
-        ))}
+      <div className="card-border rounded-xl p-10">
+        <div className="glow" />
+        <div className="flex items-center gap-1 mb-5">
+          {Array.from({ length: 5 }, (_, i) => (
+            <img key={i} src={star} alt="star" className="size-5" />
+          ))}
+        </div>
+        <div className="mb-5">
+          <p className="text-white-50 text-lg">{props.card.review}</p>
+        </div>
+        {props.children}
       </div>
-      <div className="mb-5">
-        <p className="text-white-50 text-lg">{props.card.review}</p>
-      </div>
-      {props.children}
     </div>
   );
 }
