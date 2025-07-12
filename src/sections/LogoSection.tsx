@@ -19,6 +19,9 @@ function LogoSection() {
           {logoIconsList.map((icon, index) => (
             <LogiIcon key={index} icon={icon} />
           ))}
+          {logoIconsList.map((icon, index) => (
+            <LogiIcon key={index + logoIconsList.length} icon={icon} />
+          ))}
         </div>
       </div>
     </div>

@@ -42,7 +42,7 @@ export interface TechIconProps {
   model: TechStackIcon;
 }
 
-export interface Testimonial {
+export interface Qualification {
   name: string;
   mentions: string;
   review: string;

@@ -1,5 +1,6 @@
 import { navLinks } from "@/constants";
 import { useEffect, useState } from "react";
+import profile from "/images/logos/profile.png";
 
 function NavBar() {
   const [scrolled, setScrolled] = useState(false);
@@ -7,7 +8,7 @@ function NavBar() {
   useEffect(() => {
     const handleScroll = () => {
       const isScrolled = window.scrollY > 10;
-      setScrolled(true);
+      setScrolled(isScrolled);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -18,7 +19,7 @@ function NavBar() {
     <header className={`navbar ${scrolled ? "scrolled" : "not-scrolled"}`}>
       <div className="inner">
         <a href="#hero" className="logo">
-          Usama Mangi
+          <img src={profile} /> Usama Mangi
         </a>
         <nav className="desktop">
           <ul>

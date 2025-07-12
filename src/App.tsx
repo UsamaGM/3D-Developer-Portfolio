@@ -6,7 +6,7 @@ import ShowcaseSection from "./sections/ShowcaseSection";
 import FeatureCards from "./components/FeatureCards";
 import ExperienceSection from "./sections/ExperienceSection";
 import TechStack from "./sections/TechStack";
-import Testimonials from "./sections/Testimonials";
+import Qualifications from "./sections/Qualifications";
 import ContactSection from "./sections/ContactSection";
 import Footer from "./sections/Footer";
 
@@ -20,7 +20,7 @@ export function App() {
       <FeatureCards />
       <ExperienceSection />
       <TechStack />
-      <Testimonials />
+      <Qualifications />
       <ContactSection />
       <Footer />
     </>

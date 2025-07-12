@@ -45,18 +45,15 @@ function ShowcaseSection() {
         <div className="showcase-layout">
           {/* Left */}
           <div className="first-project-wrapper" ref={project1}>
-            <div className="image-wrapper">
+            <div className="image-wrapper bg-[#daf0fd]">
               <img src={project1Img} alt="InterviewAI" />
             </div>
             <div className="text-content">
-              <h2>
-                AI based Interview Management, Sheduling, Assessment, Grading,
-                and Recommendation System
-              </h2>
+              <h2>AI-Powered Interview Platform</h2>
               <p className="text-white-50 md:text-xl">
-                A full stack plaform built with MERN stack, TypeScript,
-                TailwindCSS and Gemini API for fast, robust and scalable
-                solution.
+                Developed a MERN + TypeScript platform integrating Gemini 2.0
+                Flash API to auto-generate and grade interview questions in real
+                time.
               </p>
               <div className="flex justify-between">
                 <a

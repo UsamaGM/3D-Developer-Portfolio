@@ -10,24 +10,17 @@ import companyLogo4 from "/images/logos/company-logo-4.png";
 import companyLogo5 from "/images/logos/company-logo-5.png";
 import companyLogo6 from "/images/logos/company-logo-6.png";
 import companyLogo7 from "/images/logos/company-logo-7.png";
-import companyLogo8 from "/images/logos/company-logo-8.png";
-import companyLogo9 from "/images/logos/company-logo-9.png";
-import companyLogo10 from "/images/logos/company-logo-10.png";
-import companyLogo11 from "/images/logos/company-logo-11.png";
 
 import seo from "/images/seo.png";
 import chat from "/images/chat.png";
 import time from "/images/time.png";
 
-import reactImg from "/images/logos/react.png";
-import pythonImg from "/images/logos/python.svg";
-import nodeImg from "/images/logos/node.png";
-import threeImg from "/images/logos/three.png";
-import gitImg from "/images/logos/git.svg";
-
 import reactIcon from "/models/react_logo-transformed.glb";
+import tsIcon from "/models/typescript-transformed.glb";
+import tailwindIcon from "/models/tailwindcss-transformed.glb";
 import bunIcon from "/models/bun-transformed.glb";
 import nodeIcon from "/models/node-transformed.glb";
+import mongoIcon from "/models/mongodb-transformed.glb";
 import threeIcon from "/models/three.js-transformed.glb";
 import gitIcon from "/models/git-svg-transformed.glb";
 
@@ -38,19 +31,19 @@ import logo1 from "/images/logo1.png";
 import logo2 from "/images/logo2.png";
 import logo3 from "/images/logo3.png";
 
-import client1 from "/images/client1.png";
-import client2 from "/images/client2.png";
-import client3 from "/images/client3.png";
-import client4 from "/images/client4.png";
-import client5 from "/images/client5.png";
-import client6 from "/images/client6.png";
+import profileImg from "/images/logos/profile.png";
+import aicpBadge from "/images/logos/aicp.png";
+import cloudBadge from "/images/logos/gcloud.png";
+import google from "/images/logos/google.png";
+import react from "/images/logos/react.png";
+import girlscript from "/images/logos/girlscript.png";
+import sibau from "/images/logos/sibau.png";
 
 import insta from "/images/insta.png";
-import github from "/images/github.png";
-import x from "/images/x.png";
+import github from "/images/logos/github.png";
 import linkedin from "/images/linkedin.png";
 
-import { ExpCardData, TechStackIcon, TechStackImg, Testimonial } from "./types";
+import { ExpCardData, TechStackIcon, Qualification } from "./types";
 
 const navLinks = [
   {
@@ -66,8 +59,8 @@ const navLinks = [
     link: "#skills",
   },
   {
-    name: "Testimonials",
-    link: "#testimonials",
+    name: "Qualifications",
+    link: "#qualifications",
   },
 ];
 
@@ -83,10 +76,10 @@ const words = [
 ];
 
 const counterItems = [
-  { value: 1.5, suffix: "+", label: "Years of Experience" },
-  { value: 200, suffix: "+", label: "Satisfied Clients" },
-  { value: 108, suffix: "+", label: "Completed Projects" },
-  { value: 90, suffix: "%", label: "Client Retention Rate" },
+  { value: 1, suffix: "+", label: "Years of Experience" },
+  { value: 5, suffix: "+", label: "Satisfied Clients" },
+  { value: 10, suffix: "+", label: "Completed Projects" },
+  { value: 80, suffix: "%", label: "Client Retention Rate" },
 ];
 
 const logoIconsList = [
@@ -111,88 +104,66 @@ const logoIconsList = [
   {
     imgPath: companyLogo7,
   },
-  {
-    imgPath: companyLogo8,
-  },
-  {
-    imgPath: companyLogo9,
-  },
-  {
-    imgPath: companyLogo10,
-  },
-  {
-    imgPath: companyLogo11,
-  },
 ];
 
 const abilities = [
   {
     imgPath: seo,
-    title: "Quality Focus",
-    desc: "Delivering high-quality results while maintaining attention to every detail.",
+    title: "Problem Solver",
+    desc: "Approaching challenges with a logical mindset and delivering practical solutions, especially in full-stack and AI-integrated systems.",
   },
   {
     imgPath: chat,
-    title: "Reliable Communication",
-    desc: "Keeping you updated at every step to ensure transparency and clarity.",
+    title: "Clear Communication",
+    desc: "Providing consistent updates and progress reports to maintain transparency and alignment.",
   },
   {
     imgPath: time,
-    title: "On-Time Delivery",
-    desc: "Making sure projects are completed on schedule, with quality & attention to detail.",
-  },
-];
-
-const techStackImgs: TechStackImg[] = [
-  {
-    name: "React Developer",
-    imgPath: reactImg,
-  },
-  {
-    name: "Python Developer",
-    imgPath: pythonImg,
-  },
-  {
-    name: "Backend Developer",
-    imgPath: nodeImg,
-  },
-  {
-    name: "Interactive Developer",
-    imgPath: threeImg,
-  },
-  {
-    name: "Project Manager",
-    imgPath: gitImg,
+    title: "Consistent Delivery",
+    desc: "Meeting deadlines while ensuring code quality, clean structure, and proper documentation.",
   },
 ];
 
 const techStackIcons: TechStackIcon[] = [
   {
-    name: "React Developer",
+    name: "React JS",
     modelPath: reactIcon,
     scale: 1,
     rotation: [0, 0, 0],
   },
+  { name: "TypeScript", modelPath: tsIcon, rotation: [0, 0, 0], scale: 1.5 },
   {
-    name: "Python Developer",
+    name: "Bun JS",
     modelPath: bunIcon,
-    scale: 2.3,
-    rotation: [0.1, 0, 0],
+    scale: 2.2,
+    rotation: [0.2, 0, 0],
   },
   {
-    name: "Backend Developer",
+    name: "Node.js + Express",
     modelPath: nodeIcon,
     scale: 5,
     rotation: [0, -Math.PI / 2, 0],
   },
   {
-    name: "Interactive Developer",
-    modelPath: threeIcon,
-    scale: 0.05,
+    name: "MongoDB & Mongoose",
+    modelPath: mongoIcon,
+    scale: 3,
     rotation: [0, 0, 0],
   },
   {
-    name: "Project Manager",
+    name: "TailwindCSS",
+    modelPath: tailwindIcon,
+    scale: 1.5,
+    rotation: [0, 0, 0],
+  },
+  {
+    name: "Three JS",
+    modelPath: threeIcon,
+    scale: 0.05,
+    rotation: [Math.PI / 5, 0, 0],
+  },
+  {
+    name: "Git & Project Management",
     modelPath: gitIcon,
     scale: 0.05,
     rotation: [0, -Math.PI / 4, 0],
@@ -202,102 +173,108 @@ const techStackIcons: TechStackIcon[] = [
 const expCards: ExpCardData[] = [
   {
     review:
-      "Adrian brought creativity and technical expertise to the team, significantly improving our frontend performance. His work has been invaluable in delivering faster experiences.",
-    imgPath: exp1,
-    logoPath: logo1,
-    title: "Frontend Developer",
-    date: "January 2023 - Present",
+      "During GSSoC, Usama made meaningful open-source contributions and participated in valuable collaborative discussions with mentors and other developers.",
+    imgPath: companyLogo6,
+    logoPath: girlscript,
+    title: "Contributor – GirlScript Summer of Code",
+    date: "October 2024 – November 2024",
     responsibilities: [
-      "Developed and maintained user-facing features for the Hostinger website.",
-      "Collaborated closely with UI/UX designers to ensure seamless user experiences.",
-      "Optimized web applications for maximum speed and scalability.",
+      "Submitted PRs to open-source web projects, fixing bugs and adding features.",
+      "Participated in mentorship sessions to improve code quality.",
+      "Practiced Git workflows and issue tracking in real-world repositories.",
     ],
   },
   {
     review:
-      "Adrian’s contributions to Docker's web applications have been outstanding. He approaches challenges with a problem-solving mindset.",
-    imgPath: exp2,
-    logoPath: logo2,
-    title: "Full Stack Developer",
-    date: "June 2020 - December 2023",
+      "As an executive member at Sukkur IBA CS Society, Usama played a key role in organizing impactful tech events. His programming competition initiative was particularly well-received.",
+    imgPath: companyLogo7,
+    logoPath: sibau,
+    title: "Executive Member – Computer Science Society, Sukkur IBA",
+    date: "November 2024 – May 2025",
     responsibilities: [
-      "Led the development of Docker's web applications, focusing on scalability.",
-      "Worked with backend engineers to integrate APIs seamlessly with the frontend.",
-      "Contributed to open-source projects that were used with the Docker ecosystem.",
+      "Planned and executed Speed Programming Competitions on campus.",
+      "Contributed to organizing SIBAFest, a university-wide flagship event.",
+      "Collaborated with student leaders to manage logistics and outreach.",
     ],
   },
   {
     review:
-      "Adrian’s work on Appwrite’s mobile app brought a high level of quality and efficiency. He delivered solutions that enhanced our mobile experience & meet our product goals.",
-    imgPath: exp3,
-    logoPath: logo3,
-    title: "React Native Developer",
-    date: "March 2019 - May 2020",
+      "Usama demonstrated strong leadership and organizational skills as Campus Lead at AICP. His ability to coordinate teams and drive engagement was key to the success of several national-level webinars and events.",
+    imgPath: companyLogo5,
+    logoPath: aicpBadge,
+    title: "Campus Lead – Artificial Intelligence Community of Pakistan",
+    date: "December 2024 – Present",
     responsibilities: [
-      "Built cross-platform mobile apps using React Native, integrating with Appwrite's backend services.",
-      "Improved app performance and user experience through code optimization and testing.",
-      "Coordinated with the product team to implement features based on feedback.",
+      "Organized and hosted monthly AI webinars featuring industry professionals.",
+      "Led a diverse student team, promoting collaboration and community building.",
+      "Increased engagement and AI awareness within the student body.",
     ],
   },
 ];
 
-const expLogos = [
+const qualifications: Qualification[] = [
   {
-    name: "logo1",
-    imgPath: logo1,
-  },
-  {
-    name: "logo2",
-    imgPath: logo2,
-  },
-  {
-    name: "logo3",
-    imgPath: logo3,
-  },
-];
-
-const testimonials: Testimonial[] = [
-  {
-    name: "Esther Howard",
-    mentions: "@estherhoward",
+    name: "Usama Mangi",
+    mentions: "Full-Stack Developer",
     review:
-      "I can’t say enough good things about Adrian. He was able to take our complex project requirements and turn them into a seamless, functional website. His problem-solving abilities are outstanding.",
-    imgPath: client1,
+      "I may not have a long client list yet — but I build with clarity, care, and clean code. My goal is always to make the tech invisible and the experience seamless.",
+    imgPath: profileImg,
   },
   {
-    name: "Wade Warren",
-    mentions: "@wadewarren",
+    name: "Campus Lead – AICP",
+    mentions: "2025",
     review:
-      "Working with Adrian was a fantastic experience. He transformed our outdated website into a modern, user-friendly platform. His attention to detail and commitment to quality are unmatched. Highly recommend him for any web dev projects.",
-    imgPath: client3,
+      "Selected as the first-ever Campus Lead from Sukkur IBA, representing national AI initiative in Pakistan.",
+    imgPath: aicpBadge,
   },
   {
-    name: "Guy Hawkins",
-    mentions: "@guyhawkins",
+    name: "Google Cloud Skills Boost",
+    mentions: "Gold League - 3rd Place",
     review:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    imgPath: client2,
+      "Ranked 3rd in the Gold League of Google Cloud Skills Boost. Consistently placed in Bronze, Silver, Gold, and Diamond leagues through hands-on cloud labs and challenges.",
+    imgPath: cloudBadge,
   },
   {
-    name: "Marvin McKinney",
-    mentions: "@marvinmckinney",
+    name: "AISeekho by Google Cloud",
+    mentions: "Jan 2025 – Feb 2025",
     review:
-      "Adrian was a pleasure to work with. He turned our outdated website into a fresh, intuitive platform that’s both modern and easy to navigate. Fantastic work overall.",
-    imgPath: client5,
+      "Completed a curated series of AI and cloud computing modules with Google Cloud, including image classification, TensorFlow models, and multimodal RAG systems.",
+    imgPath: google,
   },
   {
-    name: "Floyd Miles",
-    mentions: "@floydmiles",
+    name: "Frontend Developer (React)",
+    mentions: "Coursera – Meta",
     review:
-      "Adrian’s expertise in web development is truly impressive. He delivered a robust and scalable solution for our e-commerce site, and our online sales have significantly increased since the launch. He’s a true professional!",
-    imgPath: client4,
+      "Mastered React fundamentals and advanced patterns through hands-on projects, including routing, state management, and component design.",
+    imgPath: react,
   },
   {
-    name: "Albert Flores",
-    mentions: "@albertflores",
+    name: "MERN Essential Training",
+    mentions: "LinkedIn Learning",
     review:
-      "Adrian was a pleasure to work with. He understood our requirements perfectly and delivered a website that exceeded our expectations. His skills in both frontend and backend dev are top-notch.",
-    imgPath: client6,
+      "Completed a comprehensive MERN stack course covering MongoDB, Express.js, React.js, and Node.js with real-world project deployment.",
+    imgPath: linkedin,
+  },
+  {
+    name: "React: Creating and Hosting a Full-Stack Site",
+    mentions: "LinkedIn Learning",
+    review:
+      "Learned to build and deploy a full-stack web app with React and Express, using Heroku and Netlify for hosting and environment setup.",
+    imgPath: linkedin,
+  },
+  {
+    name: "GirlScript Summer of Code",
+    mentions: "Contributor – Oct 2024",
+    review:
+      "Contributed to real open-source web projects and collaborated with mentors during GSSoC'24. Submitted multiple PRs and practiced real-world Git workflows.",
+    imgPath: girlscript,
+  },
+  {
+    name: "Speed Programming – SIBAU",
+    mentions: "Organized twice",
+    review:
+      "Led and organized the Speed Programming Competition at Sukkur IBA, promoting hands-on coding skills and competitive problem-solving culture.",
+    imgPath: sibau,
   },
 ];
 
@@ -325,10 +302,8 @@ export {
   logoIconsList,
   counterItems,
   expCards,
-  expLogos,
-  testimonials,
+  qualifications,
   socialImgs,
   techStackIcons,
-  techStackImgs,
   navLinks,
 };
