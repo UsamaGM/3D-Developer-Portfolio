@@ -64,8 +64,8 @@ This project is a demonstration of modern, high-performance web development, ble
 │ ├── constants.ts # Centralized static data for the portfolio
 │ ├── App.tsx # Main app component with routing and layout
 | ├── index.css # Global styles and Tailwind imports
-├── build.ts # Custom Bun build script
-└── frontend.tsx # Main React entry point
+| ├── build.ts # Custom Bun build script
+| └── frontend.tsx # Main React entry point
 ├── package.json # Project dependencies
 └── tsconfig.json # TypeScript configuration
 ```
